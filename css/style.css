@@ -1,0 +1,97 @@
+*{margin:0;padding:0;}
+body{margin:20px;text-align:center;}
+h4{text-align: left;}
+.clearfix::after{
+    content:'';
+    display: block;
+    clear:both;
+}
+.box{
+    margin:20px;
+}
+/*绝对定位法*/
+.dad{position:relative;}
+.left1,.right1{
+  position:absolute;
+  top:0;
+  width:200px;
+  background:yellow;
+}
+.left1{left:0;}
+.right1{right:0;}
+.center1{
+  margin:0 200px;
+  background:#ccc;
+}
+
+/*圣杯布局法*/
+.container2{
+    padding: 0 200px;
+}
+.center2{ 
+  width:100%;
+  float:left;    
+  background:#ccc;
+}
+.left2,.right2{
+  float:left;
+  width:200px;
+  background:yellow;
+  position:relative;
+}
+.left2{
+  margin-left:-100%;
+  left:-200px;
+}
+.right2{
+  margin-left:-200px;
+  left:200px;
+}
+.container2 h4{
+    position:relative;
+    left:-200px; 
+}
+
+/*双飞翼布局法*/
+.center3{
+  width:100%;
+  float:left;
+}
+.left3,.right3{
+  float:left;
+  width:200px;
+  background:yellow;
+}
+.left3{margin-left:-100%;}
+.right3{margin-left:-200px;}
+.center3-body{
+  margin:0 200px;
+  background:#ccc;
+}
+
+
+/*普通浮动布局法*/
+.left4,.right4{
+  width:200px;
+  background:yellow;
+}
+.center4{
+  margin:0 200px;
+  background:#ccc;
+}
+.left4{float:left;}
+.right4{float:right;}
+
+/*flex布局法*/
+.container5{
+    display: flex;
+}
+.left5,.right5{
+    flex-basis:200px;
+    background:yellow;
+  }
+.center5{
+    flex-grow:1;
+    background:#ccc;
+  }
+  
